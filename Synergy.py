@@ -1,8 +1,13 @@
 repeated = set()
+command = ''
 
 while True:
     print('Введите последовательность чисел через пробел')
-    numbers = set(map(int, input().split()))
+    print('Для остановки программы введите: stop')
+    line = input()
+    if line.lower() == 'stop':
+        break
+    numbers = set(map(int, line.split()))
     
     for number in numbers:
         if number in repeated:
